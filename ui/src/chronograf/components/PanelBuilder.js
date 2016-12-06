@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import ExplorerList from './ExplorerList';
+import PanelList from './PanelList';
 import * as viewActions from '../actions/view';
 
 const {string, func} = PropTypes;
@@ -37,7 +37,7 @@ const PanelBuilder = React.createClass({
       <div className="panel-builder" style={{width}}>
         <div className="panel-builder__tab-content">
           <div className="panel-builder__item btn btn-block btn-primary" onClick={this.handleCreateExploer}><span className="icon graphline"></span>&nbsp;&nbsp;Create Graph</div>
-          <ExplorerList
+          <PanelList
             actions={actions}
             setActivePanel={this.props.setActivePanel}
             activePanelID={this.props.activePanelID}
