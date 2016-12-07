@@ -1,5 +1,9 @@
 import defaultQueryConfig from './defaultQueryConfig';
 
+export function editRawText(query, rawText) {
+  return Object.assign({}, query, {rawText});
+}
+
 export function chooseNamespace(query, namespace) {
   return Object.assign({}, query, namespace);
 }
